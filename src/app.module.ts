@@ -10,6 +10,7 @@ import { InicializacionModule } from './inicializacion/inicializacion.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { ConfigModule } from '@nestjs/config';
+import { BusquedaModule } from './busqueda/busqueda.module';
 
 @Module({
   imports: [
@@ -36,7 +37,8 @@ import { ConfigModule } from '@nestjs/config';
     // Modulos custom
     UsuariosModule, 
     AuthModule,
-    InicializacionModule,  // Para inicializacion de tablas - Configurable en el controlador/servicio
+    InicializacionModule,
+    BusquedaModule,  // Para inicializacion de tablas - Configurable en el controlador/servicio
     
   ],
   
